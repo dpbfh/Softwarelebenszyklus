@@ -1,0 +1,13 @@
+C:\Users\domin\Documents\Master\softwareleb\bin\Debug\netcoreapp3.1\softwareleb.exe
+C:\Users\domin\Documents\Master\softwareleb\bin\Debug\netcoreapp3.1\softwareleb.deps.json
+C:\Users\domin\Documents\Master\softwareleb\bin\Debug\netcoreapp3.1\softwareleb.runtimeconfig.json
+C:\Users\domin\Documents\Master\softwareleb\bin\Debug\netcoreapp3.1\softwareleb.runtimeconfig.dev.json
+C:\Users\domin\Documents\Master\softwareleb\bin\Debug\netcoreapp3.1\softwareleb.dll
+C:\Users\domin\Documents\Master\softwareleb\bin\Debug\netcoreapp3.1\softwareleb.pdb
+C:\Users\domin\Documents\Master\softwareleb\obj\Debug\netcoreapp3.1\softwareleb.csprojAssemblyReference.cache
+C:\Users\domin\Documents\Master\softwareleb\obj\Debug\netcoreapp3.1\softwareleb.AssemblyInfoInputs.cache
+C:\Users\domin\Documents\Master\softwareleb\obj\Debug\netcoreapp3.1\softwareleb.AssemblyInfo.cs
+C:\Users\domin\Documents\Master\softwareleb\obj\Debug\netcoreapp3.1\softwareleb.csproj.CoreCompileInputs.cache
+C:\Users\domin\Documents\Master\softwareleb\obj\Debug\netcoreapp3.1\softwareleb.dll
+C:\Users\domin\Documents\Master\softwareleb\obj\Debug\netcoreapp3.1\softwareleb.pdb
+C:\Users\domin\Documents\Master\softwareleb\obj\Debug\netcoreapp3.1\softwareleb.genruntimeconfig.cache
