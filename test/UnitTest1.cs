@@ -34,14 +34,14 @@ namespace softwareleb
         [Test]
         public void TestAllZero()
         {   
-            Assert.AreEqual("Solution is:      NaN",QuadraticSolver.SolveQuadratic(0, 0, 0));
+            Assert.AreEqual("a = 0",QuadraticSolver.SolveQuadratic(0, 0, 0));
         }
 
         [SetCulture("de-AT")]
         [Test]
         public void TestaIsZero()
         {   
-            Assert.AreEqual(QuadraticSolver.SolveQuadratic(0, 2, 1),"One Real Solution:  -0,5000");
+            Assert.AreEqual("a = 0",QuadraticSolver.SolveQuadratic(0, 2, 1));
         }
 
 
@@ -64,14 +64,82 @@ namespace softwareleb
         [Test]
         public void TestAllZeroGB()
         {   
-            Assert.AreEqual("Solution is:      NaN",QuadraticSolver.SolveQuadratic(0, 0, 0));
+            Assert.AreEqual("a = 0",QuadraticSolver.SolveQuadratic(0, 0, 0));
         }
 
         [SetCulture("en-GB")]
         [Test]
         public void TestaIsZeroGB()
         {   
-            Assert.AreEqual(QuadraticSolver.SolveQuadratic(0, 2, 1),"One Real Solution:  -0.5000");
+            Assert.AreEqual("a = 0", QuadraticSolver.SolveQuadratic(0, 2, 1));
         }
+
+
+        //----------------------- Real Root -----------------
+        [SetCulture("de-AT")]
+        [Test]
+        public void TestSolveQuadraticRealRootssqrtpartPositive()
+        {   
+            Assert.AreEqual("Two Real Solutions:   1,6667 or   -3,5000",QuadraticSolver.SolveQuadraticRealRoots(6, 11, -35));
+        }
+
+        [SetCulture("de-AT")]
+        [Test]
+        public void TestSolveQuadraticRealRootssqrtpartNegative()
+        {   
+            Assert.AreEqual("Imaginary Solutions",QuadraticSolver.SolveQuadraticRealRoots(5, 2, 1));
+        }
+        
+        [SetCulture("de-AT")]
+        [Test]
+        public void TestSolveQuadraticRealRootssqrtparZero()
+        {   
+            Assert.AreEqual("One Real Solution:  -1,0000",QuadraticSolver.SolveQuadraticRealRoots(2, 4, 2));
+        }
+
+        [SetCulture("de-AT")]
+        [Test]
+        public void TestSolveQuadraticRealRootsAllZero()
+        {   
+            Assert.AreEqual("a = 0",QuadraticSolver.SolveQuadraticRealRoots(0, 0, 0));
+        }
+
+        [SetCulture("de-AT")]
+        [Test]
+        public void TestSolveQuadraticRealRootsaIsZero()
+        {   
+            Assert.AreEqual(QuadraticSolver.SolveQuadratic(0, 2, 1),"a = 0");
+        }
+
+
+       
+        [SetCulture("en-GB")]
+        [Test]
+        public void TestSolveQuadraticRealRootssqrtpartNegativeGB()
+        {   
+            Assert.AreEqual("Imaginary Solutions",QuadraticSolver.SolveQuadraticRealRoots(5, 2, 1));
+        }
+        
+        [SetCulture("en-GB")]
+        [Test]
+        public void TestSolveQuadraticRealRootssqrtparZeroGB()
+        {   
+            Assert.AreEqual("One Real Solution:  -1.0000",QuadraticSolver.SolveQuadraticRealRoots(2, 4, 2));
+        }
+
+        [SetCulture("en-GB")]
+        [Test]
+        public void TestSolveQuadraticRealRootsAllZeroGB()
+        {   
+            Assert.AreEqual("a = 0",QuadraticSolver.SolveQuadraticRealRoots(0, 0, 0));
+        }
+
+        [SetCulture("en-GB")]
+        [Test]
+        public void TestSolveQuadraticRealRootsaIsZeroGB()
+        {   
+            Assert.AreEqual(QuadraticSolver.SolveQuadratic(0, 2, 1),"a = 0");
+        }
+
     }
 }

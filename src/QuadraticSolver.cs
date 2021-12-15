@@ -4,14 +4,18 @@ namespace softwareleb
 {
     public class QuadraticSolver
     {
+        // Source: https://newbedev.com/csharp-salvatoin-for-quadratic-function-in-c-code-example
         public static string SolveQuadratic(double a, double b, double c)
         {
-
-            double sqrtpart = b * b - 4 * a * c;
-
+            if (a == 0)
+            {
+                return "a = 0";
+            }
+            double sqrtpart = b * b - 4 * a * c; // Hier rundungs Fehler möglich b * b - 4 * a * c
+            // Bsp. 0 könnte auch bereich sein hierführ abschätzung --> Ergänzen
             double x, x1, x2, img;
 
-            if (a != 0 && sqrtpart > 0)
+            if (sqrtpart > 0)
 
             {
 
@@ -22,7 +26,7 @@ namespace softwareleb
                 return String.Format("Two Real Solutions: {0,8:f4} or  {1,8:f4}", x1, x2);
             }
 
-            else if (a != 0 && sqrtpart < 0)
+            else if (sqrtpart < 0)
 
             {
 
@@ -38,24 +42,21 @@ namespace softwareleb
             }
             else
             {
-                if (a == 0)
-                {
-                    if (double.IsNaN(-c / b))
-                    {
-                        return String.Format("Solution is: {0,8:f4}", double.NaN);
-
-                    }
-                    return String.Format("One Real Solution: {0,8:f4}", -c / b);
-                }
-
                 x = (-b + System.Math.Sqrt(sqrtpart)) / (2 * a);
-
 
                 return String.Format("One Real Solution: {0,8:f4}", x);
             }
 
         }
 
+        //Nach Besprechung Hinzgefügt
+        public static string SolveQuadraticRealRoots(double a, double b, double c)
+        {
+            if(b * b - 4 * a * c  < 0){ // Hier rundungs Fehler möglich b * b - 4 * a * c
+                return "Imaginary Solutions";
+            }
+            return SolveQuadratic( a,  b, c);
+         }
 
     }
 }
