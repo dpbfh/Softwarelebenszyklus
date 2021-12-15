@@ -4,3 +4,4 @@
 - a muss immer größer als 0 sein
 - a b und c müssen kommazahlen sein können
 - Die Ergebnisse liefern 4 Nachkomma stellen
+- j für imaginäre Zahlen verwenden
